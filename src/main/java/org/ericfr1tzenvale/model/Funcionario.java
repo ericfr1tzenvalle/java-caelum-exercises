@@ -15,10 +15,9 @@ public class Funcionario {
     public Funcionario(String nome, String rg, double salario, String departamento) {
         this.nome = nome;
         this.rg = rg;
-        this.dataEntrada = LocalDate.now();
         this.salario = salario;
         this.departamento = departamento;
-        this.estaNaEmpresa = true;
+        this.estaNaEmpresa = false;
     }
 
     public void receberAumento(double salario) {
