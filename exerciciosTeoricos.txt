@@ -1,0 +1,130 @@
+Respostas dos exercícios de teoria do livro: Caelum
+2.16 Por que Java foi escolhido em um projeto?
+Geralmente java é escolhido pela portabilidade pois roda em qualquer sistema que tenha JVM, ou seja é ideal pra projetos que precisam rodar em Windows, Linux, mac ou até em servidores diferentes. 
+Java também apresenta um diversidade grande de bibliotecas, pra web, banco de dados, segurança.
+É bem rápido JIT compilation e tem uma boa gestão de memoria graças ao garbage collector.
+Java é fortemente tipado o que ajuda a evitar erros.
+Projetos grandes se beneficiam da estrutura de pacotes, modularidade e orientação a objetos.
+Java possui diversos frameworks e ferramentas como Spring, Hibernate, Maven, Grandle, que facilitam o desenvolvimento...
+Em resumo: O Java geralmente é escolhido quando se precisa de portabilidade, segurança, estabilidade e grande suporte da comunidade.
+
+1) Um arquivo fonte java sempre deve terminar com .java Exemplo: MinhaClasse.java
+Se a classe for public, o nome do arquivo deve ser igual ao nome da classe.
+
+Compilação e execução:
+Compile: javac OutraClasse.java
+Isso gera OutraClasse.class(bytecode)
+Execute: java OutraClasse (Não coloque .class)
+
+3.3 Exercicios: (Realizados)
+
+3.4 Convenções de código e código legí-
+vel
+
+Convenções de código, Por que existem? 
+1. Padronização: Permitem que desenvolvedores escrevam códigos de forma consistente.
+2. Facilitam a leitura e manutenção: Código padronizado é mais fácil de entender para outros desenvolvedores, mesmo que nunca tenham visto o projeto antes.
+3. Reduz erros: Seguir padrões ajuda a evitar confusões e problemas, principalmente  em projetos grandes com várias pessoas
+
+Por que são importantes?
+Mantem a consistência e evita bugs e retrabalho.
+IDE's, linters e frameworks funcionam melhor quando você segue convenções.
+Facilita o onboarding de novos desenvolvedores.
+
+(Linter): é uma ferramenta que analisa seu código para encontrar problemas de estilo, erros comuns ou más praticas. Exemplo Checkstyle é um linter que verifica se você está seguindo as convenções Java (nomes de métodos,identação,etc.).
+
+(Onboarding): é o processo de integração de um novo funcionário ou desenvolvedor em uma equipe ou projeto. Inclui: aprender sobre o código, ferramentas, processos e  cultura da empresa.
+Quanto mais legível e padronizado for o código, mais fácil e rápido é o onboarding.
+
+
+As vantagens de escrever um código limpo e fácil de ler são a redução de erros, manutenção mais simples e menos necessidade de comentários.
+
+
+
+3.12
+
+1) do-while: quando queremos que a tarefa seja executada ao menos uma vez.
+switch: é interessante quando temos uma cadeia de valores fixos, o que é mais interessante do que diversos else if.
+
+2) Geralmente em um código bem limpo não teremos labeled loops. Mas ele é usado em for aninhados permitindo dar nome a um laço e usar break; ou continue  para interromper ou pular um laço externo.
+
+3) Numero inteiro dividido por 0 -> Lança ArithmeticException que é um erro.
+Numero ponto flutuante dividido por 0.0 -> Não lança erro, retorna infinity ou -infinity dependendo do sinal.
+
+4) Casting entre tipos primitivos
+Há uma conversão automática chamada widening de tipos menores para maiores
+byte -> short -> int -> long -> float -> double
+char -> int -> long -> float -> double
+
+O casting explicido é necessário quando vai de um tipo maior para menor, para evitar perda de dados.
+
+
+5) Incremento ou decremento e operações compostas.
+Incremento: i++ (pós), ++i (pré) → soma 1 ao valor de i
+Decremento: i-- ou --i → subtrai 1 do valor de i
+Operadores compostos: i += x → i = i + x, i -= x → i = i - x
+
+3.13/ 3.14 Exercícios de fixação de sintaxe (pulados).
+
+4.11 Exercicios
+
+1) Não pode começar com número (ex.: 1nome → errado)
+
+Pode usar letras, números, $ e _, mas não espaços ou símbolos especiais.
+
+Nomes sensíveis a maiúsculas/minúsculas (idade ≠ Idade)
+
+Palavras reservadas do Java não podem ser usadas (class, int, for, etc.)
+
+2) Variáveis e  métodos:  camelCase → começa com letra minúscula, depois maiúsculas em palavras internas (nomeFuncionario)
+
+Classes:  PascalCase → todas palavras iniciam com maiúscula (Funcionario)
+
+Constantes:  UPPER_CASE (PI)
+
+Objetivo:  facilitar leitura, manutenção e entendimento do código entre programadores.
+
+3) Não é obrigatória se não houver ambiguidade entre atributos e parâmetros.
+
+4) É uma linguagem padrão de diagramas para modelar sistemas orientados a objetos.
+
+Usos principais:
+
+Representar classes, atributos, métodos, relacionamentos e fluxos do sistema.
+
+Facilita comunicação, planejamento e documentação.
+
+Ex.: Diagrama de classes UML de um Funcionario mostra atributos (nome, salario) e métodos (getNome(), setSalario()).
+
+4.12 Exercícios: Orientação a Objetos (Realizados)
+
+4.13 (Pendente)
+Realizar exercício pra resolver a série de Fibonacci com recursividade.
+
+4.14 (Pulados)
+
+
+6.7 Um pouco mais...
+1) Em algumas empresas, o UML é amplamente utilizado. Às vezes, o programador recebe o UML já pronto,
+completo, e só deve preencher a implementação, devendo seguir à risca o UML. O que você acha dessa
+prática? Quais as vantagens e desvantagens.
+Entre as vantagens temos, a visualização, porque o UML ajuda a entender melhor o sistema antes de começar a codar, a padronização, pois o UML é uma linguagem padronizada para modelagem de sistemas, Documentação pois o uml funciona como documento do sistema, para o planejamento e design pois auxilia na identificação das classes, objetos e relacionamentos e reduz erros e retrabalho. E pode ser usado em sistemas pequenos e grandes e diferentes metodologias ágil,cascata, iterativa
+
+Desvantagens: para sistemas pequenos o uml pode ser um exagero e consumir tempo.
+Nem todo mundo entende todos os tipos de diagramas(caso de uso,classe,sequencia,etc..) sem treinamento.
+Manutenção: podem ficar desatualizados se não forem mantidos juntos com o código.
+Ferramentas: algumas ferramentas uml são pagas ou complicadas de utilizar.
+Formalidade: focar demais em diagramas pode atrasar a entrega do software, principalmente em equipes ágeis.
+
+2) Se uma classe só tem atributos e métodos estáticos, que conclusões podemos tirar? O que lhe parece um
+método estático em casos como esses?
+Não precisa de instancias ou seja como o Math em java, chamamos Math.sqrt(25), sem necessariamente criar um  Math m = new Math();
+Geralmente essas classes possuem funções utilitárias ou constantes, como Converter.celsiusParaFahrenheit(), cálculos matemáticos, manipulações de String etc...
+Estado global: ou seja eles são compartilhados com todos "Usuários" da classe, isso é como uma variável global, então precisamos ter cuidado com a concorrência ou efeitos colaterais.
+
+
+
+3) No caso de atributos booleanos, pode-se usar no lugar do get o suxo is. Dessa maneira, caso tivéssemos
+um atributo booleano ligado, em vez de getLigado poderíamos ter isLigado.
+
+Sim, isso é uma convenção da nomenclatura em Java para atributos booleanos.
