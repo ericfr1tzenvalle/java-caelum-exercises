@@ -128,3 +128,74 @@ Estado global: ou seja eles são compartilhados com todos "Usuários" da classe,
 um atributo booleano ligado, em vez de getLigado poderíamos ter isLigado.
 
 Sim, isso é uma convenção da nomenclatura em Java para atributos booleanos.
+
+
+======================================================================
+
+6.8 Exercicios 
+1) Com modificador de acesso em private não é possivel acessar os atributos diretamente, ou seja ficam encapsulados.
+6) Seria interresante ter os dois, tanto para listar todos os funcionarios como para listar um determinado funcionario.
+7) Se dermos um new Empresa() sem passar argumento algum dá erro, pois é necessario que tenha o tamanho do array caso coloque.
+8) o int x está fora do escopo de uma instancia static, metodos static não tem acesso a esses atributos da classe teste, a não ser se instanciar o objeto teste
+com Teste teste = new Teste(); ai sim conseguiria.
+9) Há dois passos para realização do singleton, 
+1. tornar o construtor privado para que não tenha como criar um novo.
+2. criar um método de criação estático que atue como um construtor. 
+Internamente, esse método chama o construtor privado para criar um objeto e salvá-lo em um campo estático. 
+Todas as chamadas subsequentes a esse método retornam o objeto armazenado em cache.
+Como fazer? 
+1. Adicione um campo estático privado à classe para armazenar a instância singleton.
+
+2.Declare um método de criação estático público para obter a instância singleton.
+
+3.Implemente a "inicialização preguiçosa" dentro do método estático. Ele deve criar um novo objeto na primeira chamada e colocá-lo no campo estático. O método deve sempre retornar essa instância em todas as chamadas subsequentes.
+
+4.Torne o construtor da classe privado. O método estático da classe ainda poderá chamar o construtor, mas não os outros objetos.
+
+5.Revise o código do cliente e substitua todas as chamadas diretas ao construtor do singleton por chamadas ao seu método de criação estático.
+
+E para carater de aprendizado singleton 
+
+package refactoring_guru.singleton.example.non_thread_safe;
+
+Um breve exemplo:
+
+public final class Singleton {
+    private static Singleton instance;
+    public String value;
+
+    private Singleton(String value) {
+        // The following code emulates slow initialization.
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        this.value = value;
+    }
+
+    public static Singleton getInstance(String value) {
+        if (instance == null) {
+            instance = new Singleton(value);
+        }
+        return instance;
+    }
+}
+
+package refactoring_guru.singleton.example.non_thread_safe;
+
+public class DemoSingleThread {
+    public static void main(String[] args) {
+        System.out.println("If you see the same value, then singleton was reused (yay!)" + "\n" +
+                "If you see different values, then 2 singletons were created (booo!!)" + "\n\n" +
+                "RESULT:" + "\n");
+        Singleton singleton = Singleton.getInstance("FOO");
+        Singleton anotherSingleton = Singleton.getInstance("BAR");
+        System.out.println(singleton.value);
+        System.out.println(anotherSingleton.value);
+    }
+}
+
+//Informação retiradas do refactoring.guru
+
+==============================================================
