@@ -259,3 +259,21 @@ Usar construtores protegidos para inicializar o atributo.
 Assim, a herança funciona sem expor desnecessariamente os dados.
 
 Resumindo: encapsulamento continua com private, e as filhas acessam via métodos controlados.
+
+=======================================================
+Capitulo 8 - Aborda mais sobre o eclipse IDE então foi pulado.
+=======================================================
+
+9.6 Classes Abstratas
+
+1) Sim, pois não queremos que uma conta seja só uma Conta e sim uma ContaCorrente ou ContaPoupança, então interface é uma boa.
+
+2) A vantagem é generalizar e trabalhar com poliformismo dinamico.
+
+3) A classe poupança é obrigada a implementar pois na interface não existe implementação
+
+5) existe sim, mas a classe ContaCorrente também teria que ser uma interface.
+
+6) O metodo atualiza na classe é pra firmar um contrato com quem extends essa abstract e ser obrigado, se apagarmos da classe Conta não vamos poder referenciar.
+
+7) 

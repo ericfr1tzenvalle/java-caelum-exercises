@@ -8,7 +8,8 @@ package org.ericfr1tzenvale.model.cap7;
  *
  * @author Luísa
  */
-public class Conta {
+public abstract class Conta {
+    //Não é uma boa pratica
     protected double saldo;
     
     public void depositar(double valor){
@@ -16,10 +17,7 @@ public class Conta {
         
     }
     
-    public void atualizar(double taxa){
-        this.saldo += this.saldo * taxa;
-        
-    }
+    public abstract void atualizar(double taxaSelic);
     
     public void sacar(double valor){
         this.saldo -= valor;
