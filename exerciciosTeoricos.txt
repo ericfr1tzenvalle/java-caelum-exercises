@@ -199,3 +199,63 @@ public class DemoSingleThread {
 //Informação retiradas do refactoring.guru
 
 ==============================================================
+
+7.6
+1) Se não houvesse herança em Java, como você poderia reaproveitar o código de outra classe? 
+R: Acredito que no famoso crtl + c / ctrl + v/ Ou composição ou delegação.
+
+Composição: em vez de herdar de uma classe, você cria um atributo do tipo dessa classe e utiliza seus métodos.
+
+
+2) Uma discussão muito atual é sobre o abuso no uso da herança. Algumas pessoas usam herança apenas
+para reaproveitar o código, quando poderiam ter feito uma composição. Procure sobre herança versus
+composição.  
+
+Herança vs Composição (discussão atual):
+
+Herança (is-a): usada quando a classe é um tipo da outra. Ex: Cachorro extends Animal.
+
+Vantagens: facilita polimorfismo, reaproveita código.
+
+Desvantagens: pode gerar acoplamento rígido (mudanças na classe mãe afetam as filhas).
+
+Composição (has-a): usada quando a classe possui um objeto de outra classe. Ex: Carro tem um Motor.
+
+Vantagens: mais flexível, permite trocar implementações em tempo de execução, reduz acoplamento.
+
+Desvantagens: às vezes gera mais "trabalho" na hora de repassar métodos.
+
+Use herança quando há uma clara relação "é um" (ex: Gato é um Animal).
+
+Prefira composição quando for apenas "tem um" (ex: Carro tem um Motor).
+
+
+3) É o uso de super() dentro dos construtores, que chama o construtor da classe mãe.
+
+====
+
+7.7 Exercícios Herança e Poliformismo
+
+4) Cada uma imprime um valor diferente, pois seus metodos foram reescritos.
+
+5) Compila, pois o JVM decide em tempo de execução qual metodo  chamar, com poliformismo dinamico. É util para generalizar o codigo  sem  precisar criar uma logica separada para cada subtipo
+
+9) Não
+
+10) Foi feito mas com arrayList
+
+7.8) Usar protected em atributos afrouxa o encapsulamento → não é a melhor prática.
+
+O ideal é manter os atributos sempre private.
+
+Para as filhas trabalharem com eles, você pode:
+
+Criar getters/setters protected.
+
+Criar métodos específicos protected (ex: saca(), deposita()) em vez de dar acesso livre.
+
+Usar construtores protegidos para inicializar o atributo.
+
+Assim, a herança funciona sem expor desnecessariamente os dados.
+
+Resumindo: encapsulamento continua com private, e as filhas acessam via métodos controlados.
