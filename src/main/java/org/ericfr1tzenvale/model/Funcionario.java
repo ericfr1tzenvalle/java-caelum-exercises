@@ -3,7 +3,7 @@ package org.ericfr1tzenvale.model;
 import java.time.LocalDate;
 
 //Exercicio Cap 4.
-public abstract class Funcionario {
+public class Funcionario {
     private String nome;
     private String departamento;
     private double salario;
@@ -20,7 +20,9 @@ public abstract class Funcionario {
         this.estaNaEmpresa = false;
     }
     
-    public abstract double getBonificacao();
+    public double getBonificacao(){
+        return this.salario * 1.2;
+    }
 
     public void receberAumento(double salario) {
         this.salario += salario;

@@ -276,4 +276,21 @@ Capitulo 8 - Aborda mais sobre o eclipse IDE então foi pulado.
 
 6) O metodo atualiza na classe é pra firmar um contrato com quem extends essa abstract e ser obrigado, se apagarmos da classe Conta não vamos poder referenciar.
 
-7) 
+7) ok
+
+=====================================================
+Os capitulos anteriores foram sobre classe abstrata e interface: Fazendo um comparativo direto entre os dois temos as seguintes caracteristicas. 
+Uma classe abstrata é usada quando existe algo em comum entre as classes, funcionando de forma parecida com a herança. Ela não pode ser instanciada, pode ter atributos, métodos concretos e também métodos abstratos. Normalmente é usada quando se quer compartilhar estado e parte da implementação entre subclasses. Só permite herança simples.
+
+Já a interface representa um contrato: qualquer classe que a implemente deve obrigatoriamente fornecer a implementação dos métodos definidos. Diferente da classe abstrata, quem implementa a interface não precisa ter nada em comum além da capacidade de realizar as ações especificadas. Interfaces não possuem atributos de instância, apenas constantes, e permitem múltiplas implementações, ou seja, uma classe pode implementar várias interfaces ao mesmo tempo.
+
+Usa classe abstrata quando as classes têm características em comum (atributos e parte da lógica compartilhada) e tu quer reaproveitar código.
+
+Usa interface quando tu precisa só de um contrato de comportamento, sem herança de atributos ou implementação, e quando uma classe pode ter várias "capacidades" diferentes ao mesmo tempo.
+
+Exercícios dos capitulos anteriores feitos.
+
+=======================================================
+Cap 11. Exceções e controle.
+
+
