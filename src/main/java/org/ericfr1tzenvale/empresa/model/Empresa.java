@@ -1,4 +1,4 @@
-package org.ericfr1tzenvale.model;
+package org.ericfr1tzenvale.empresa.model;
 
 public class Empresa {
     private String nome;

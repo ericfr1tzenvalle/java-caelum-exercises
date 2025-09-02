@@ -292,5 +292,55 @@ Exercícios dos capitulos anteriores feitos.
 
 =======================================================
 Cap 11. Exceções e controle.
+Exercícios resolvidos.
+
+11.12) Quando a JVM (Java Virtual Machine) não consegue mais alocar memória para novos objetos, ela lança um java.lang.OutOfMemoryError.
+
+“Heap space” é a área de memória onde os objetos do Java são alocados.
+
+Isso normalmente acontece quando:
+
+Criamos muitos objetos e não liberamos referência a eles (vazamento de memória / memory leak).
+
+Alocamos arrays enormes ou coleções gigantes.
+
+💡 Observação: a JVM tenta primeiro liberar memória via garbage collector (GC), mas se mesmo assim não houver espaço suficiente, o OutOfMemoryError ocorre.
+
+
+=========================================================
+
+Usar catch(Exception e) ou throws Exception é má prática, porque generaliza os erros. Quem recebe a exceção não sabe exatamente qual tipo ocorreu e não consegue tratá-la corretamente.
+
+Se queremos tratar várias exceções de forma igual (ex.: IOException e SQLException), não é recomendável usar catch(Exception e), pois isso também pegaria outras exceções inesperadas.
+
+A solução correta é usar multi-catch (Java 7+), permitindo tratar múltiplas exceções específicas em um único bloco, sem duplicar código:
+
+try {
+    // código que pode lançar IOException ou SQLException
+} catch (IOException | SQLException e) {
+    // tratamento comum para essas exceções
+}
+
+
+✅ Vantagem: mantém o tratamento específico das exceções sem generalizar para todas e evita repetição de código.
+
+
+====================================================================
+
+Capítulo 14 - O pacote java.lang
+Exercícios Realizados.
+
+15)  (opcional) Pesquise a classe StringBuilder (ou StringBuer no Java 1.4). Ela é mutável. Por que usá-la
+em vez da String? Quando usá-la? 
+
+String é imutável, então cada concatenação cria um novo objeto na memória. 
+
+StringBuilder é mutável, permitindo modificar a mesma sequência de caracteres sem criar novos objetos.
+
+Use String para poucas concatenações e StringBuilder quando for fazer muitas alterações ou dentro de loops, pois é mais rápido e eficiente.
+
+=====================================================================
+
+Capitulo 15 java.io
 
 

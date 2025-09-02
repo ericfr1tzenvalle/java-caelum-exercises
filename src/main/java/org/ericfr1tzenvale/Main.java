@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import org.ericfr1tzenvale.model.Empresa;
-import org.ericfr1tzenvale.model.Funcionario;
+import org.ericfr1tzenvale.empresa.model.Empresa;
+import org.ericfr1tzenvale.empresa.model.Funcionario;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

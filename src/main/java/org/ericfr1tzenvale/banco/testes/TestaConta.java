@@ -2,11 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.ericfr1tzenvale.model.banco;
+package org.ericfr1tzenvale.banco.testes;
 
-import org.ericfr1tzenvale.model.banco.ContaCorrente;
-import org.ericfr1tzenvale.model.banco.ContaPoupanca;
-import org.ericfr1tzenvale.model.banco.Conta;
+import org.ericfr1tzenvale.banco.model.AtualizadorDeContas;
+import org.ericfr1tzenvale.banco.model.ContaCorrente;
+import org.ericfr1tzenvale.banco.model.ContaPoupanca;
+import org.ericfr1tzenvale.banco.model.Conta;
 import java.util.ArrayList;
 import java.util.List;
 

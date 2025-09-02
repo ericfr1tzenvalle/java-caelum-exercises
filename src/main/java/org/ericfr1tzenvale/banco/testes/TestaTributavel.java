@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.ericfr1tzenvale.model.banco;
+package org.ericfr1tzenvale.banco.testes;
+
+import org.ericfr1tzenvale.banco.model.Tributavel;
+import org.ericfr1tzenvale.banco.model.ContaCorrente;
 
 /**
  *
@@ -16,6 +19,8 @@ public class TestaTributavel {
         
         Tributavel tt = cc;
         System.out.println(tt.calculaTributos());
+        
+        //System.out.println(tt.getSaldo()); Não compila pois não tem acesso
     }
     
 }
