@@ -84,6 +84,13 @@ public  abstract class Conta {
                 Objects.equals(this.getNumeroConta(), c.getNumeroConta());
         
     }
+    
+    @Override
+    public String toString(){
+        return getClass().getName().replace("org.ericfr1tzenvale.banco.model.", "") + "\nNumero: " + getNumeroConta()+
+                "\nSaldo: R$" + getSaldo()+
+                "\nTitular: " + getNome();
+    }
 
  
     

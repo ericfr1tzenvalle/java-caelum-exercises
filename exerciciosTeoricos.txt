@@ -343,4 +343,38 @@ Use String para poucas concatenações e StringBuilder quando for fazer muitas a
 
 Capitulo 15 java.io
 
+Unicode e character encoding?
+
+
+=====================================================================
+
+Capitulo 16 Collections
+
+compareTo(Object). Este método deve retornar zero, se o objeto comparado for igual a este objeto, um número negativo, se este objeto for menor que o objeto dado, e um número positivo, se este objeto for maior que o objeto dado.
+
+Exercícios:
+
+1) No ArrayList, a operação contains() percorre a lista elemento por elemento até encontrar (ou não) o valor, ou seja, tem complexidade O(n). Isso torna a busca lenta quando o número de elementos cresce, mesmo que a inserção seja rápida.
+
+Já no HashSet, os elementos são armazenados em uma tabela hash, o que faz com que a busca (contains()) seja feita em tempo constante O(1) na média. A inserção pode ser um pouco mais custosa que em uma lista, mas a diferença é mínima comparada à vantagem na pesquisa.
+
+Assim, para casos em que precisamos fazer muitas buscas, o HashSet é muito mais eficiente do que o ArrayList.
+
+2) A ideia é: quanto mais genérica a interface, mais flexível e desacoplado fica o código, mas às vezes precisamos de comportamentos específicos que só existem em interfaces mais especializadas. 
+
+Se quisermos acessar elementos por posição, precisamos obrigatoriamente de um List, pois o método get(int index) não existe em Collection
+
+Resumindo pra resolução:
+
+Use Collection quando qualquer coleção serve.
+
+Use List quando precisar de acesso posicional ou elementos ordenados por inserção.
+
+Use Set quando precisar de unicidade.
+
+Use SortedSet/TreeSet quando precisar de unicidade e ordenação natural.
+
+===============================================================
+Capitulo 17 Threads
+
 

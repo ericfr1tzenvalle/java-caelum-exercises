@@ -10,7 +10,7 @@ import org.ericfr1tzenvale.banco.model.Conta;
  *
  * @author Luísa
  */
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta implements Comparable<ContaPoupanca>{
     @Override
     public void atualizar(double taxa){
         setSaldo(getSaldo()+ getSaldo() * taxa * 3);
@@ -21,6 +21,12 @@ public class ContaPoupanca extends Conta{
     }
 
     public ContaPoupanca() {
+    }
+
+    @Override
+    public int compareTo(ContaPoupanca o) {
+        return Double.compare(o.getSaldo(), this.getSaldo()); 
+        //Ordenado do menor pro maior se for ao contrario.
     }
     
     

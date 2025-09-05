@@ -31,11 +31,6 @@ public class ContaCorrente extends Conta implements Tributavel{
     public double calculaTributos() {
         return this.getSaldo() * 0.01;
     }
-    @Override
-    public String toString(){
-        return "Conta Corrente"
-                + "\nSaldo: " + this.getSaldo();
-    }
     
     @Override
     public int hashCode(){
