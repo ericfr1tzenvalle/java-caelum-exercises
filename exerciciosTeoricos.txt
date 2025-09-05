@@ -377,4 +377,17 @@ Use SortedSet/TreeSet quando precisar de unicidade e ordenação natural.
 ===============================================================
 Capitulo 17 Threads
 
+17.4)
+1) A execução muda sempre que rodamos pois não sabemos como thread vai se comportar. 
+Porque quem decide a ordem de execução das threads é o escalonador da JVM + Sistema Operacional.
+
+Então, cada vez que você roda, o SO pode dar mais tempo de CPU para t1 ou para t2, mudando a ordem da impressão.
+
+É justamente isso que o exercício quer mostrar: concorrência = resultados não determinísticos (a ordem muda).
+
+================================================================
+                              Fim
+Eu gostei bastante da didática do livro, por mais que não aborde as
+novas funcionalidades como Stream e lambdas etc...
+É um livro muito bom pra entrada nos conhecimentos de java, possivelmente vou ler outros do caelum, com certeza contribuiu para meu desenvolvimento em java.
 
